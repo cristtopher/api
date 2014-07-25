@@ -20,6 +20,13 @@ if __name__ == '__main__':
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("localhost", 8000))
     
+    errors = {"unable to open serial port": 1, 
+              "data whit errors": 2,
+              "****": 3}
+
+
+    #crear bluque para enviar cada 10 min hasta que reciba respuesta del server
+
     # Se envia "hola"
     s.send("hola")
     
@@ -27,14 +34,5 @@ if __name__ == '__main__':
     datos = s.recv(1000)
     print datos
     
-    # Espera de 2 segundos
-    time.sleep(2)
     
-    # Se envia "adios"
-    s.send("adios")
-    
-    # Se espera respuesta, se escribe en pantalla y se cierra la
-    # conexion
-    datos = s.recv(1000)
-    print datos
     s.close()

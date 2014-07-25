@@ -13,44 +13,44 @@ class Cliente(Thread):
  
     # Bucle para atender al cliente.       
     def run(self):
-      	# Bucle indefinido hasta que el cliente envie "adios"
-      	seguir = True
-      	while seguir:
-         	# Espera por datos
-         	peticion = self.socket.recv(1000)
+        # Bucle indefinido hasta que el cliente envie "adios"
+        seguir = True
+        while seguir:
+            # Espera por datos
+            peticion = self.socket.recv(1000)
          
-         	# Contestacion a "hola"
-         	if ("hola"==peticion):
-             	print str(self.datos)+ " envia hola: contesto"
-             	self.socket.send("pues hola")
-             
-         	# Contestacion y cierre a "adios"
-         	if ("adios"==peticion):
-             	print str(self.datos)+ " envia adios: contesto y desconecto"
-             	self.socket.send("pues adios")
-             	self.socket.close()
-             	print "desconectado "+str(self.datos)
-             	seguir = False
+            # Contestacion a "hola"
+            if ("hola"==peticion):
+                print str(self.datos)+ " envia hola: contesto"
+                self.socket.send("pues hola")
+               
+            # Contestacion y cierre a "adios"
+            if ("adios"==peticion):
+                print str(self.datos)+ " envia adios: contesto y desconecto"
+                self.socket.send("pues adios")
+                self.socket.close()
+                print "desconectado "+str(self.datos)
+                seguir = False
         
 
 
 
 if __name__ == '__main__':
-   	# Se prepara el servidor
-   	server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-   	server.bind(("", 8000))
-   	server.listen(1)
-   	print "Esperando clientes..."
+    # Se prepara el servidor
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.bind(("", 8000))
+    server.listen(1)
+    print "Esperando clientes..."
    
-   	# bucle para atender clientes
-   	while 1:
+    # bucle para atender clientes
+    while 1:
        
-    	# Se espera a un cliente
-    	socket_cliente, datos_cliente = server.accept()
-      
-    	# Se escribe su informacion
-    	print "conectado "+str(datos_cliente)
-      
-    	# Se crea la clase con el hilo y se arranca.
-    	hilo = Cliente(socket_cliente, datos_cliente)
-    	hilo.start()
+        # Se espera a un cliente
+        socket_cliente, datos_cliente = server.accept()
+        
+        # Se escribe su informacion
+        print "conectado "+str(datos_cliente)
+        
+        # Se crea la clase con el hilo y se arranca.
+        hilo = Cliente(socket_cliente, datos_cliente)
+        hilo.start()
