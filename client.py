@@ -6,11 +6,11 @@ import time
 from innovex.configuration import Configuration
 
 def read():
-	#log = open("/var/log/enviroview/oxigeno.log", "r")
-	log = open("oxigeno.log", "r")
+    #log = open("/var/log/enviroview/oxigeno.log", "r")
+    log = open("oxigeno.log", "r")
     cf = Configuration()
-	print log.read(5), cf.key
-	#while True:
+    print log.read(5), cf.key
+    #while True:
     #    line = log.readline()
     #    if not line: break
     #    if "Calibra" in line and "exitosamente" in line:
