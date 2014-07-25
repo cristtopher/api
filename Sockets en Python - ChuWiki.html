@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" class="client-nojs">
+<head>
+<title>Sockets en Python - ChuWiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.21.3" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ChuWiki (es)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://chuwiki.chuidiang.org/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Feed Atom de ChuWiki" href="/index.php?title=Especial:CambiosRecientes&amp;feed=atom" />
+<link rel="stylesheet" href="http://chuwiki.chuidiang.org/load.php?debug=false&amp;lang=es&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/skins/../sh_style.css?303" />
+<link rel="stylesheet" href="/skins/../styles/shCore.css?303" />
+<link rel="stylesheet" href="/skins/../styles/shThemeDefault.css?303" /><meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: chuidia_chuwiki-ChuWiki:resourceloader:filter:minify-css:7:ee01e5d31f2e23efc1d91fb84aa1ee13 */</style>
+
+<script src="http://chuwiki.chuidiang.org/load.php?debug=false&amp;lang=es&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Sockets_en_Python","wgTitle":"Sockets en Python","wgCurRevisionId":3655,"wgArticleId":1823,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Python"],"wgBreakFrames":false,"wgPageContentLanguage":"es","wgSeparatorTransformTable":[",	."," 	,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"wgMonthNamesShort":["","ene","feb","mar","abr","mayo","jun","jul","ago","sep","oct","nov","dic"],"wgRelevantPageName":"Sockets_en_Python","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,
+"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"es","language":"es","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});;},{},{});
+/* cache key: chuidia_chuwiki-ChuWiki:resourceloader:filter:minify-js:7:bf4264d8cb5c32344959ae8d6b25f5ec */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Sockets_en_Python skin-monobook action-view">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" class="mw-body-primary" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><div id="localNotice" lang="es" dir="ltr"><p>
+<p></p>
+<p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- chuwiki banner grande -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9287470222246340"
+     data-ad-slot="6444256034"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- chuwiki banner grande -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9287470222246340"
+     data-ad-slot="6444256034"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+</p></div></div>
+ <g:plusone></g:plusone> <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="chuidiang" data-lang="es">Twittear</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></h1>
+	<h1 id="firstHeading" class="firstHeading" lang="es"><span dir="auto">Sockets en Python</span></h1>
+	<div id="bodyContent" class="mw-body">
+		<div id="siteSub">De ChuWiki</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav" class="mw-jump">Saltar a: <a href="#column-one">navegación</a>, <a href="#searchInput">buscar</a></div>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'es'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+		<!-- start content -->
+<div id="mw-content-text" lang="es" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contenido</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Ejemplo_sencillo_de_sockets_con_python"><span class="tocnumber">1</span> <span class="toctext">Ejemplo sencillo de <i>sockets</i> con <i>python</i></span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#El_servidor"><span class="tocnumber">1.1</span> <span class="toctext">El servidor</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#El_cliente"><span class="tocnumber">1.2</span> <span class="toctext">El cliente</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Ponemos_un_hilo_al_servidor"><span class="tocnumber">2</span> <span class="toctext">Ponemos un hilo al servidor</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Enlaces"><span class="tocnumber">3</span> <span class="toctext">Enlaces</span></a></li>
+</ul>
+</td></tr></table>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="Ejemplo_sencillo_de_sockets_con_python"> Ejemplo sencillo de <i>sockets</i> con <i>python</i> </span></h2>
+<p>En este tutorial vamos a hacer un pequeño servidor <a href="/index.php?title=Categor%C3%ADa:Python" title="Categoría:Python">python</a> y un cliente <i>python</i> que se conectan con <i>socket</i>, se intercambian unas cadenas de texto y cierran la conexión. Aquí tienes los <a rel="nofollow" class="external text" href="http://code.google.com/p/chuidiang-ejemplos/source/browse/#svn/trunk/python-socket/src%3Fstate%3Dclosed">fuentes completos del ejemplo de sockets con python</a>.
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="El_servidor"> El servidor </span></h3>
+<p>En el servidor, primero establecemos el <i>socket</i> servidor. Para ello, usamos el módulo <i>socket</i> de <i>python</i>, haciendo el <i>import</i> correspondiente. Damos los siguientes pasos:
+</p>
+<ul><li> Llamada a la función <i>socket()</i>, a la que le pasamos el tipo de <i>socket</i> que queremos abrir (en el ejemplo, <i>AF_INET</i>, <i>SOCK_STREAM</i> que es el habitual). 
+</li><li> Llamada a la función <i>bind()</i>, pasándole un <i>address</i> compuesto por <i>(host, puerto)</i>. Como hacemos de servidor, pasamos "" como <i>host</i> y puerto el que queramos que esté libre (8000). La llamada a <i>bind()</i> le indica al sistema operativo que nosotros vamos a atender las conexiones por el puerto 8000.
+</li><li> Llamada a <i>listen()</i>. Esta llamada indica al sistema operativo que ya estamos listos para admitir conexiones. El número 1 de parámetro indica cuantos clientes podemos tener encolados en espera simultáneamente. Este número no debería ser grande, puesto que es el número máximo de clientes que quedarán encolados desde que aceptamos un cliente hasta que estamos dispuestos a aceptar el siguiente. Si el código está bien hecho, este tiempo debería ser realmente pequeño, ya que al conectarse un cliente, deberíamos lanzar un <a href="/index.php?title=Hilos_en_python" title="Hilos en python">hilo</a> para atenderlo y entrar inmediatamente a la espera de otro cliente.
+</li></ul>
+<p>El código de todo esto puede ser
+</p>
+<pre>
+import socket
+
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.bind((&quot;&quot;, 8000))
+server.listen(1)
+</pre>
+<p>Ahora nos metemos en un bucle eterno, esperando clientes y atendiéndolos. Para esperar un cliente, la llamada es <i>accept()</i>, que nos devuelve un par <i>(socket_cliente, datos_cliente)</i> del que obtenemos el <i>socket</i> para hablar con el cliente y sus datos <i>(ip, puerto)</i>.
+</p>
+<pre>
+   # bucle para atender clientes
+   while 1:
+      # Se espera a un cliente
+      socket_cliente, datos_cliente = server.accept()
+      # Se escribe su informacion
+      print &quot;conectado &quot;+str(datos_cliente)
+</pre>
+<p>Ahora hacemos otro bucle para recibir y atender los datos del cliente. Deberíamos meter este bucle en un hilo, de forma que el hilo principal vuelva al <i>accept()</i> y sea capaz de atender más clientes mientras atendemos al primero, pero no vamos a hacerlo para no liar el código.
+</p><p>Para leer los datos del cliente, usamos <i>recv()</i>, pasando como parámetro el número máximo de <i>bytes</i> que queremos leer de una tacada. La lectura se quedará bloqueada hasta que llegue algo del cliente. En cuanto lleguen datos, la llamada nos devolverá esos datos y no esperará hasta el máximo que hemos indicado. El bucle para atender al cliente puede quedar así
+</p>
+<pre>
+      # Bucle indefinido hasta que el cliente envie &quot;adios&quot;
+      seguir = True
+      while seguir:
+         # Espera por datos
+         peticion = socket_cliente.recv(1000)
+         
+         # Contestacion a &quot;hola&quot;
+         if (&quot;hola&quot;==peticion):
+             print str(datos_cliente)+ &quot; envia hola: contesto&quot;
+             socket_cliente.send(&quot;pues hola&quot;)
+             
+         # Contestacion y cierre a &quot;adios&quot;
+         if (&quot;adios&quot;==peticion):
+             print str(datos_cliente)+ &quot; envia adios: contesto y desconecto&quot;
+             socket_cliente.send(&quot;pues adios&quot;)
+             socket_cliente.close()
+             print &quot;desconectado &quot;+str(datos_cliente)
+             seguir = False
+</pre>
+<p>La variable <i>seguir</i> nos hará permanecer en el bucle hasta que la pongamos a <i>False</i>, cosa que haremos cuando cerremos la conexión con el cliente. <i>recv(1000)</i> lee las peticiones del cliente y con los <i>if</i> comprobamos si lo recibido es "<i>hola</i>" o "<i>adios</i>". Para contestar usamos <i>send()</i>, enviando la cadena de respuesta. Si es "<i>adios</i>", además de contestar, cerramos el <i>socket</i> y ponemos a <i>False</i> la variable seguir, para terminar el bucle.
+</p><p>El código completo está en <a rel="nofollow" class="external text" href="http://code.google.com/p/chuidiang-ejemplos/source/browse/trunk/python-socket/src/servidor.py">servidor.py</a>
+</p>
+<h3> <span class="mw-headline" id="El_cliente"> El cliente </span></h3>
+<p>Para el cliente, creamos el <i>socket</i> con la llamada a <i>socket()</i>, igual que en el servidor, pero establecemos la conexión con <i>connect()</i>, indicando el <i>host</i> servidor (<i>localhost</i> en nuestro ejemplo) y el puerto.
+</p>
+<pre>
+import socket
+...
+# Se establece la conexion
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((&quot;localhost&quot;, 8000))
+</pre>
+<p>El resto es más sencillo que en el servidor. Envíamos "hola" con <i>send()</i>, esperamos y escribimos la respuesta con <i>recv()</i>, hacemos una espera de 2 segundos con <i>sleep()</i>, enviamos con <i>send()</i> la cadena "adios", esperamos y escribimos respuesta con <i>recv()</i> y finalmente cerramos el <i>socket</i> con <i>close()</i>
+</p>
+<pre>
+import time
+...
+# Se envia &quot;hola&quot;
+s.send(&quot;hola&quot;)
+# Se recibe la respuesta y se escribe en pantalla
+datos = s.recv(1000)
+print datos    
+# Espera de 2 segundos
+time.sleep(2)    
+# Se envia &quot;adios&quot;
+s.send(&quot;adios&quot;)    
+# Se espera respuesta, se escribe en pantalla y se cierra la
+# conexion
+datos = s.recv(1000)
+print datos
+s.close()
+</pre>
+<p>Aquí tienes el código completo de <a rel="nofollow" class="external text" href="http://code.google.com/p/chuidiang-ejemplos/source/browse/trunk/python-socket/src/cliente.py">cliente.py</a>
+</p>
+<h2> <span class="mw-headline" id="Ponemos_un_hilo_al_servidor"> Ponemos un hilo al servidor </span></h2>
+<p>Como comentamos antes, la forma correcta de hacer el servidor es haciendo que <a href="/index.php?title=Hilos_en_python" title="Hilos en python">cree un nuevo hilo</a> para atender a cada cliente. De esta forma, el servidor podrá seguir aceptando clientes mientras atiende simultáneamente a los ya conectados.
+</p><p>Para la creación del hilo en <i>python</i> usaremos la clase <i>Thread</i> del módulo <i>threading</i> de <i>python</i>. Nos basta hacer una clase Cliente hija de <i>Thread</i> y ponerle el método <i>run()</i>. En ese método haremos el bucle para atender al cliente. Esta clase necesitará los datos del cliente así como el <i>socket</i> que debe atender. Por ello, metemos ambos parámetros en el constructor de la clase para almacenarlos. El código puede ser este
+</p>
+<pre>
+import threading
+...
+#Clase con el hilo para atender a los clientes.
+#En el constructor recibe el socket con el cliente y los datos del
+#cliente para escribir por pantalla
+class Cliente(Thread):
+    def __init__(self, socket_cliente, datos_cliente):
+        # LLamada al constructor padre, para que se inicialice de forma
+        # correcta la clase Thread.
+        Thread.__init__(self)
+        # Guardamos los parametros recibidos.
+        self.socket = socket_cliente
+        self.datos = datos_cliente
+ 
+    # Bucle para atender al cliente.       
+    def run(self):
+      # Bucle indefinido hasta que el cliente envie &quot;adios&quot;
+      seguir = True
+      while seguir:
+         # Espera por datos
+         peticion = self.socket.recv(1000)
+         
+         # Contestacion a &quot;hola&quot;
+         if (&quot;hola&quot;==peticion):
+             print str(self.datos)+ &quot; envia hola: contesto&quot;
+             self.socket.send(&quot;pues hola&quot;)
+             
+         # Contestacion y cierre a &quot;adios&quot;
+         if (&quot;adios&quot;==peticion):
+             print str(self.datos)+ &quot; envia adios: contesto y desconecto&quot;
+             self.socket.send(&quot;pues adios&quot;)
+             self.socket.close()
+             print &quot;desconectado &quot;+str(self.datos)
+             seguir = False
+
+</pre>
+<p>Vemos que en el método <i>run()</i> el código es prácticamente igual al que teníamos en el servidor de <i>python</i> para atender al cliente. En dicho servidor, ahora solo tenemos que instanciar una clase <i>Cliente</i> cada vez que se conecte un cliente, pasándole como parámetros el <i>socket</i> del cliente y sus datos.
+</p>
+<pre>
+   # bucle para atender clientes
+   while 1:
+      # Se espera a un cliente
+      socket_cliente, datos_cliente = server.accept()
+      # Se escribe su informacion
+      print &quot;conectado &quot;+str(datos_cliente)
+      # Se crea la clase con el hilo
+      hilo = Cliente(socket_cliente, datos_cliente)
+      # y se arranca el hilo
+      hilo.start()
+</pre>
+<p>Ahora, si arrancamos el servidor, podemos arrancar a la vez varios clientes y todos ellos serán atendidos simultáneamente. Aquí tienes el código completo de <a rel="nofollow" class="external text" href="http://code.google.com/p/chuidiang-ejemplos/source/browse/trunk/python-socket/src/servidor_thread.py">servidor_thread.py</a>
+</p>
+<h2> <span class="mw-headline" id="Enlaces"> Enlaces </span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://foro.chuidiang.com/pyhton/">foro de python</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 82/1000000
+Preprocessor generated node count: 164/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key chuidia_chuwiki-ChuWiki:pcache:idhash:1823-0!*!0!!es!*!* and timestamp 20140724143409 -->
+</div><div class="printfooter">
+Obtenido de «<a href="http://chuwiki.chuidiang.org/index.php?title=Sockets_en_Python&amp;oldid=3655">http://chuwiki.chuidiang.org/index.php?title=Sockets_en_Python&amp;oldid=3655</a>»</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php?title=Especial:Categor%C3%ADas" title="Especial:Categorías">Categoría</a>: <ul><li><a href="/index.php?title=Categor%C3%ADa:Python" title="Categoría:Python">Python</a></li></ul></div></div>		<!-- end content -->
+                        <p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9287470222246340";
+/* chuwiki abajo */
+google_ad_slot = "1183591635";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+                        </p>
+
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<h2>Menú de navegación</h2>
+	<div id="p-cactions" class="portlet" role="navigation">
+		<h3>Vistas</h3>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/index.php?title=Sockets_en_Python" primary="1" context="subject" title="Ver el artículo [c]" accesskey="c">Página</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=Discusi%C3%B3n:Sockets_en_Python&amp;action=edit&amp;redlink=1" primary="1" context="talk" title="Discusión acerca del artículo [t]" accesskey="t">Discusión</a></li>
+				<li id="ca-viewsource"><a href="/index.php?title=Sockets_en_Python&amp;action=edit" primary="1" title="Esta página está protegida.&#10;Puedes ver su código fuente [e]" accesskey="e">Ver fuente</a></li>
+				<li id="ca-history"><a href="/index.php?title=Sockets_en_Python&amp;action=history" rel="archives" title="Versiones anteriores de esta página y sus autores [h]" accesskey="h">Historial</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal" role="navigation">
+		<h3>Herramientas personales</h3>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/index.php?title=Especial:Entrar&amp;returnto=Sockets+en+Python" title="Te recomendamos iniciar sesión, sin embargo no es obligatorio [o]" accesskey="o">Iniciar sesión</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo" role="banner">
+<a href="/index.php?title=Chuwiki" style="background-image: url(serpi.gif);" title="Visitar la página principal"></a>
+	</div>
+	<div class="generated-sidebar portlet" id="p-navigation" role="navigation">
+		<h3>Navegación</h3>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/index.php?title=Chuwiki" title="Visitar la página principal [z]" accesskey="z">Chuwiki</a></li>
+				<li id="n-portal"><a href="/index.php?title=ChuWiki:Portal_de_la_comunidad" title="Acerca del proyecto, lo que puedes hacer, dónde encontrar información">Portal de la comunidad</a></li>
+				<li id="n-recentchanges"><a href="/index.php?title=Especial:CambiosRecientes" title="Lista de cambios recientes en el wiki [r]" accesskey="r">Cambios recientes</a></li>
+				<li id="n-help"><a href="/index.php?title=Ayuda:Contenidos" title="El lugar para aprender">Ayuda</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Enlaces" role="navigation">
+		<h3>Enlaces</h3>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Foro-de-Programaci.C3.B3n"><a href="http://foro.chuidiang.com" rel="nofollow">Foro de Programación</a></li>
+				<li id="n-Blog-de-Programaci.C3.B3n"><a href="http://blog.chuidiang.com" rel="nofollow">Blog de Programación</a></li>
+				<li id="n-Apuntes-de-Programaci.C3.B3n"><a href="http://www.chuidiang.com" rel="nofollow">Apuntes de Programación</a></li>
+				<li id="n-Proyectos-Java"><a href="http://proyectos.chuidiang.com" rel="nofollow">Proyectos Java</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Redes_sociales" role="navigation">
+		<h3>Redes sociales</h3>
+		<div class='pBody'>
+			<ul>
+				<li id="n-.40Chuidiang-en-Twitter"><a href="https://twitter.com/chuidiang" rel="nofollow">@Chuidiang en Twitter</a></li>
+				<li id="n-Facebook"><a href="https://www.facebook.com/chuidiang" rel="nofollow">Facebook</a></li>
+				<li id="n-Linkedin"><a href="https://www.linkedin.com/in/chuidiang" rel="nofollow">Linkedin</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Repositorios_C.C3.B3digo" role="navigation">
+		<h3>Repositorios Código</h3>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Github"><a href="https://github.com/chuidiang" rel="nofollow">Github</a></li>
+				<li id="n-Google-Code"><a href="https://code.google.com/u/chuidiang/" rel="nofollow">Google Code</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet" role="search">
+		<h3><label for="searchInput">Buscar</label></h3>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="Especial:Buscar"/>
+				<input type="search" name="search" title="Buscar en ChuWiki [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Ir" title="Ir al artículo con este nombre exacto si existe" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Buscar" title="Busca este texto en las páginas" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb" role="navigation">
+		<h3>Herramientas</h3>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/index.php?title=Especial:LoQueEnlazaAqu%C3%AD/Sockets_en_Python" title="Lista de todas las páginas del wiki que enlazan aquí [j]" accesskey="j">Lo que enlaza aquí</a></li>
+				<li id="t-recentchangeslinked"><a href="/index.php?title=Especial:CambiosEnEnlazadas/Sockets_en_Python" title="Cambios recientes en las páginas que enlazan con ésta [k]" accesskey="k">Cambios relacionados</a></li>
+				<li id="t-specialpages"><a href="/index.php?title=Especial:P%C3%A1ginasEspeciales" title="Lista de todas las páginas especiales [q]" accesskey="q">Páginas especiales</a></li>
+				<li id="t-print"><a href="/index.php?title=Sockets_en_Python&amp;printable=yes" rel="alternate" title="Versión imprimible de esta página [p]" accesskey="p">Versión para imprimir</a></li>
+				<li id="t-permalink"><a href="/index.php?title=Sockets_en_Python&amp;oldid=3655" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li>
+				<li id="t-info"><a href="/index.php?title=Sockets_en_Python&amp;action=info">Información de la página</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer" role="contentinfo">
+	<div id="f-poweredbyico">
+		<a href="//www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Esta página fue modificada por última vez el 2 mar 2009, a las 16:00.</li>
+		<li id="viewcount">Esta página ha sido visitada 11 189 veces.</li>
+		<li id="privacy"><a href="/index.php?title=ChuWiki:Pol%C3%ADtica_de_protecci%C3%B3n_de_datos" title="ChuWiki:Política de protección de datos">Política de protección de datos</a></li>
+		<li id="about"><a href="/index.php?title=ChuWiki:Acerca_de" title="ChuWiki:Acerca de">Acerca de ChuWiki</a></li>
+		<li id="disclaimer"><a href="/index.php?title=ChuWiki:Limitaci%C3%B3n_general_de_responsabilidad" title="ChuWiki:Limitación general de responsabilidad">Aviso legal</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+mw.loader.state({"site":"loading","user":"missing","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.hidpi"], null, true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served in 0.243 secs. --><div style="text-align:center;">
+<br>
+<!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/deed.es"><img alt="Creative Commons License" style="border-width: 0" src="http://i.creativecommons.org/l/by-nc-sa/2.5/es/88x31.png"/></a><br/>Esta obra est&#225; bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/deed.es">licencia de Creative Commons</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+       <Work rdf:about="">
+               <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
+       <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+       </Work>
+       <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> --><br>
+Para reconocer la autor&iacute;a debes poner <a href="http://chuwiki.chuidiang.org">http://chuwiki.chuidiang.org</a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-256265-5");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript" src="sh_main.js"></script>
+<script type="text/javascript" src="sh_java.js"></script>
+<script type="text/javascript" src="scripts/shCore.js"></script>
+<script type="text/javascript" src="scripts/shBrushJava.js"></script>
+<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="scripts/shBrushPython.js"></script>
+<script type="text/javascript" src="scripts/shBrushSql.js"></script>
+<script type="text/javascript" src="scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="scripts/shBrushXml.js"></script>
+
+<script type="text/javascript">
+     SyntaxHighlighter.all();
+     sh_highlightDocument();
+</script>
+</body></html>
